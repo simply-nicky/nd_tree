@@ -14,8 +14,8 @@ extension_args = {'extra_compile_args': ['-fopenmp', '-std=c++20'],
                                    os.path.join(sys.prefix, 'include'),
                                    os.path.join(os.path.dirname(__file__), 'nd_tree/src')]}
 
-extensions = [Pybind11Extension("nd_tree.src.image_proc",
-                                sources=["nd_tree/src/image_proc.cpp"],
+extensions = [Pybind11Extension("nd_tree.src.nd_tree",
+                                sources=["nd_tree/src/nd_tree.cpp"],
                                 define_macros = [('VERSION_INFO', __version__)],
                                 **extension_args),]
 
