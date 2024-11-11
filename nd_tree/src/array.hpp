@@ -229,7 +229,7 @@ template <class T>
 inline size_t hash_combine(size_t seed, const T & v)
 {
     //  Golden Ratio constant used for better hash scattering
-    //  See https://softwareengineering.stackexchange.com/a/402543 
+    //  See https://softwareengineering.stackexchange.com/a/402543
     return seed ^ (std::hash<T>()(v) + GOLDEN_RATIO + (seed << 6) + (seed >> 2));
 }
 
@@ -383,7 +383,7 @@ public:
     array(shape_handler handler, T * ptr) : shape_handler(std::move(handler)), ptr(ptr) {}
 
     array(ShapeContainer shape, T * ptr) : shape_handler(std::move(shape)), ptr(ptr) {}
-    
+
     array(size_t count, T * ptr) : shape_handler({count}) , ptr(ptr) {}
 
     array(const py::buffer_info & buf) : array(buf.shape, static_cast<T *>(buf.ptr)) {}

@@ -304,9 +304,9 @@ public:
             {
                 for (size_t i = 0; i < (1 << N); i++) if (ptr->parent->children[i] == ptr) {index = i; break;}
             }
-            else index = 0; 
+            else index = 0;
         }
-        
+
         friend class NDTree;
     };
 
@@ -437,7 +437,7 @@ public:
     {
         return {node_ptr(), root};
     }
-    
+
     const box_t & box() const {return root->box;}
 
     const box_t & box(const_iterator pos) const {return pos->box;}
