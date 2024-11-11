@@ -1,0 +1,9 @@
+name: nd_tree
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - llvm-openmp
+  - numpy
+  - pybind11
+  - python>=3.10
